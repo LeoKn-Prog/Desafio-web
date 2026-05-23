@@ -1,0 +1,372 @@
+        /* ================================================= */
+        /* VARIABLES */
+        /* ================================================= */
+        :root{
+
+            --bg-color: #050816;
+            --card-color: rgba(15, 23, 42, 0.85);
+            --primary-color: #06b6d4;
+            --primary-hover: #0891b2;
+            --secondary-color: #8b5cf6;
+            --text-color: #f8fafc;
+            --paragraph-color: #cbd5e1;
+            --input-bg: #111827;
+            --border-color: rgba(255,255,255,0.08);
+            --success-color: #22c55e;
+            --danger-color: #ef4444;
+            --shadow-color: rgba(0,0,0,0.4);
+            --radius: 20px;
+            --transition: 0.3s ease;
+        }
+
+        /* ===================================================== */
+        /* RESET */
+        /* ===================================================== */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===================================================== */
+        /* BODY */
+        /* ===================================================== */
+        body{
+
+            font-family: 'Outfit', sans-serif;
+
+            min-height: 100vh;
+
+            background:
+            radial-gradient(circle at top left, #0f172a, #020617);
+
+            color: var(--text-color);
+
+            padding: 30px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        /* ===================================================== */
+        /* CONTENEDOR PRINCIPAL */
+        /* ===================================================== */
+        .container{
+
+            width: 100%;
+
+            max-width: 1300px;
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 40px;
+        }
+
+        /* ===================================================== */
+        /* TARJETAS */
+        /* ===================================================== */
+        .card{
+
+            background: var(--card-color);
+
+            border: 1px solid var(--border-color);
+
+            border-radius: var(--radius);
+
+            padding: 40px;
+
+            backdrop-filter: blur(15px);
+
+            box-shadow: 0 20px 50px var(--shadow-color);
+        }
+
+        /* ===================================================== */
+        /* SECCIÓN INFORMATIVA */
+        /* ===================================================== */
+        .info{
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+        .tag{
+
+            width: fit-content;
+
+            background: rgba(6,182,212,0.15);
+
+            border: 1px solid rgba(6,182,212,0.3);
+
+            color: #67e8f9;
+
+            padding: 8px 16px;
+
+            border-radius: 999px;
+
+            font-size: 0.85rem;
+
+            margin-bottom: 20px;
+        }
+
+        .title{
+
+            font-size: clamp(2rem, 5vw, 3.5rem);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .description{
+
+            color: var(--paragraph-color);
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+        .formula-box{
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        .formula{
+
+            background: rgba(255,255,255,0.04);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            padding: 20px;
+
+            border-radius: 16px;
+
+            text-align: center;
+
+            font-size: 1.2rem;
+
+            font-weight: 600;
+
+            overflow-x: auto;
+        }
+
+        /* ===================================================== */
+        /* FORMULARIO */
+        /* ===================================================== */
+        form{
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 30px;
+        }
+
+        .group{
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+        .group-title{
+
+            font-size: 1.2rem;
+
+            font-weight: 600;
+
+            color: #a5f3fc;
+        }
+
+        .form-grid{
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .input-box{
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        label{
+
+            font-size: 0.95rem;
+
+            font-weight: 500;
+        }
+
+        input{
+
+            width: 100%;
+
+            background: var(--input-bg);
+
+            border: 1px solid transparent;
+
+            border-radius: 14px;
+
+            padding: 15px;
+
+            color: var(--text-color);
+
+            font-size: 1rem;
+
+            transition: var(--transition);
+        }
+
+        input:focus{
+
+            outline: none;
+
+            border-color: var(--primary-color);
+
+            box-shadow: 0 0 0 4px rgba(6,182,212,0.15);
+        }
+
+        /* ===================================================== */
+        /* BOTÓN */
+        /* ===================================================== */
+        button{
+
+            border: none;
+
+            background: linear-gradient(
+                135deg,
+                var(--primary-color),
+                var(--secondary-color)
+            );
+
+            color: white;
+
+            padding: 16px;
+
+            border-radius: 14px;
+
+            font-size: 1rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+        }
+
+        button:hover{
+
+            transform: translateY(-3px);
+
+            opacity: 0.9;
+        }
+
+        /* ===================================================== */
+        /* RESULTADO */
+        /* ===================================================== */
+        .result-box{
+
+            background: rgba(34,197,94,0.1);
+
+            border: 1px solid rgba(34,197,94,0.25);
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .result-title{
+
+            color: #86efac;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            font-size: 0.9rem;
+        }
+
+        .result{
+
+            font-size: clamp(2rem, 5vw, 3rem);
+
+            font-weight: 700;
+
+            word-break: break-word;
+
+            color: var(--success-color);
+        }
+
+        .result-description{
+
+            color: var(--paragraph-color);
+
+            line-height: 1.7;
+        }
+
+        /* ===================================================== */
+        /* RESPONSIVE TABLET */
+        /* ===================================================== */
+        @media(max-width: 950px){
+
+            .container{
+
+                grid-template-columns: 1fr;
+            }
+
+            .card{
+
+                padding: 30px;
+            }
+        }
+
+        /* ===================================================== */
+        /* RESPONSIVE MOBILE */
+        /* ===================================================== */
+        @media(max-width: 600px){
+
+            body{
+
+                padding: 15px;
+            }
+
+            .card{
+
+                padding: 25px;
+            }
+
+            .form-grid{
+
+                grid-template-columns: 1fr;
+            }
+
+            button{
+
+                width: 100%;
+            }
+        }

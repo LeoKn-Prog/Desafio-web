@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Transferencia de Calor</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ========================================================= -->
+    <!-- CONTENEDOR PRINCIPAL -->
+    <!-- ========================================================= -->
+    <main class="container">
+
+        <!-- ===================================================== -->
+        <!-- INFORMACIÓN -->
+        <!-- ===================================================== -->
+        <section class="card info">
+
+            <span class="tag">
+                Física • Simulación Matemática
+            </span>
+
+            <h1 class="title">
+                Simulador de Transferencia de Calor
+            </h1>
+
+            <p class="description">
+                Esta simulación utiliza la Ley de Enfriamiento de Newton para calcular la temperatura final de un objeto después de un tiempo determinado dentro de un entorno con temperatura constante.
+            </p>
+
+            <div class="formula">
+                T = Ts + (T0 - Ts) × e<sup>(-k × t)</sup>
+            </div>
+
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- FORMULARIO -->
+        <!-- ===================================================== -->
+        <section class="card">
+
+            <form id="formulario">
+
+                <div class="form-grid">
+
+                    <!-- ========================================= -->
+                    <!-- TEMPERATURA INICIAL -->
+                    <!-- ========================================= -->
+                    <div class="input-box">
+
+                        <label for="t0">
+                            Temperatura Inicial (T0)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="t0"
+                            value="120"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- ========================================= -->
+                    <!-- TEMPERATURA DEL ENTORNO -->
+                    <!-- ========================================= -->
+                    <div class="input-box">
+
+                        <label for="ts">
+                            Temperatura del Entorno (Ts)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="ts"
+                            value="38"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- ========================================= -->
+                    <!-- CONSTANTE -->
+                    <!-- ========================================= -->
+                    <div class="input-box">
+
+                        <label for="k">
+                            Constante (k)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="k"
+                            step="0.01"
+                            value="0.45"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- ========================================= -->
+                    <!-- TIEMPO -->
+                    <!-- ========================================= -->
+                    <div class="input-box">
+
+                        <label for="t">
+                            Tiempo en Horas (t)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="t"
+                            value="3"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+                <!-- ============================================= -->
+                <!-- BOTÓN -->
+                <!-- ============================================= -->
+                <button type="submit">
+                    Calcular Temperatura Final
+                </button>
+
+                <!-- ============================================= -->
+                <!-- RESULTADO -->
+                <!-- ============================================= -->
+                <div class="result-box">
+
+                    <span class="result-title">
+                        Resultado Final
+                    </span>
+
+                    <h2 class="result" id="resultado">
+                        59 °C
+                    </h2>
+
+                    <p class="extra-info" id="mensaje">
+                        La temperatura aproximada del objeto después del tiempo transcurrido es de 59 grados Celsius.
+                    </p>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- ========================================================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================================================= -->
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
